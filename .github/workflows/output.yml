@@ -1,8 +1,8 @@
-name: Output Github Context on Issues
+name: Handle Issues
 on: issues
 jobs:
   output:
     runs-on: ubuntu-latest
     steps:
       - name: Output Github Context
-        run: echo "${{ toJson(github) }}"
+        run: echo "${{ toJson(github.event) }}"
